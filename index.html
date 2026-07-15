@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カード図鑑</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- バナー -->
+    <header>
+        <img src="banner.png" alt="カード図鑑" id="banner">
+    </header>
+
+    <!-- 検索 -->
+    <section id="search-area">
+        <input
+            type="text"
+            id="search"
+            placeholder="カード名を検索..."
+        >
+    </section>
+
+    <!-- 一覧画面 -->
+    <main id="list-page">
+        <div id="card-list"></div>
+    </main>
+
+    <!-- 詳細画面 -->
+    <main id="detail-page" class="hidden">
+
+        <button id="back-button">
+            ← 戻る
+        </button>
+
+        <img id="detail-image">
+
+        <h1 id="detail-name"></h1>
+
+        <p><strong>種類：</strong><span id="detail-type"></span></p>
+
+        <p><strong>コスト：</strong><span id="detail-cost"></span></p>
+
+        <p id="atk-row">
+            <strong>ATK：</strong>
+            <span id="detail-atk"></span>
+        </p>
+
+        <p><strong>色：</strong><span id="detail-color"></span></p>
+
+        <h2>効果</h2>
+
+        <p id="detail-effect"></p>
+
+    </main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
