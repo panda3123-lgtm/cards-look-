@@ -1,0 +1,124 @@
+/* 全体 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+/* バナー */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+#banner {
+    width: min(100%, 900px);
+    height: auto;
+}
+
+/* 検索 */
+#search-area {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#search {
+    width: min(500px, 90%);
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+}
+
+/* 一覧 */
+#card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* カード */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 63 / 88;
+    object-fit: cover;
+}
+
+.card-name {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* 詳細画面 */
+#detail-page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#back-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#detail-image {
+    display: block;
+    width: min(350px, 90%);
+    margin: auto;
+    border-radius: 10px;
+}
+
+#detail-name {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#detail-page p {
+    margin: 10px 0;
+    line-height: 1.7;
+}
+
+#detail-effect {
+    white-space: pre-wrap;
+}
+
+/* スマホ */
+@media (max-width: 700px) {
+
+    #card-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    #search {
+        width: 95%;
+    }
+
+}
